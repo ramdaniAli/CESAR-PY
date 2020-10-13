@@ -3,18 +3,16 @@ alphabet = string.ascii_lowercase
 
 def decrypt():
     
-    encrypted_message = input("enter key : ").strip()
+    encry_msg = input("enter key : ").strip()
     
     key = int(input("enter cesar index: "))
     
-    decrypted_message = ""
+    decry_msg = ""
 
-    for c in encrypted_message:
+    for c in encry_msg:
         if c in alphabet:
-            position = alphabet.find(c)
-            new_position = (position + key)
-            new_character = alphabet[new_position]
-            decrypted_message += new_character
+            new_character = alphabet[alphabet.find(c) + key]
+            decry_msg  += new_character
         else:
             decrypted_message += c
 
